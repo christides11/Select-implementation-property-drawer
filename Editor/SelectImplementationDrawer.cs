@@ -84,7 +84,7 @@ public class SelectImplementationDrawer : PropertyDrawer
             }
             {
                 var _implementationTypeIndex = EditorGUI.Popup(new Rect(position.x, position.y, popupWidth, menuHeight), $"Implementation ({_implementations.Count - 1})",
-                GetImplementationTypeIndex(property), _implementations.Select(impl => impl == null ? "null" : impl.FullName.Replace('+', '/')).ToArray());
+                GetImplementationTypeIndex(property), _implementations.Select(impl => impl == null ? "null" : impl.FullName.Replace('.', '/')).ToArray());
                 
                 SetImplementationTypeIndex(property, _implementationTypeIndex);
             }
